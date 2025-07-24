@@ -1,0 +1,177 @@
+:root{
+    --primary-color: #FED001;
+}
+htlm{
+    font-size: 62.5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+}
+
+p, a{
+    font-size: 1.4rem;
+}
+nav a{
+    color: inherit;
+}
+.upper{
+    text-transform: uppercase;
+}
+.wrappercontainer-dark{
+    background-color: #2a2a2a;
+    color: #fafafa;
+}
+.wrappercontainer-light{
+    background-color: #fafafa;
+}
+.wrappercontainer-dark2{
+    background-color: #003464;
+    color: #fafafa;
+}
+.wrappercontainer-fixed{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.wrappercontainer-padded{
+    padding-top: 200rem;
+}
+.cantainer{
+    max-width: 127.6rem;
+    margin-left: 100px;
+    
+}
+.section-title{
+    padding: 1.5rem 0;
+    text-align: center;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 1.8rem 0;
+}
+.header-nav a{
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+   
+}
+.header-nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: .6rem;
+}
+.header-nav li{
+    margin-right: 15px;
+}
+.header-nav a:hover{
+    background-color: black;
+}
+.herobanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.wrappercontainer-hero{
+    background-image:linear-gradient( transparent, yellow) ;
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+.btn{
+    margin-left: 14rem;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    border-radius: 4px;
+    padding: 1.8rem;
+    display: inline-block;
+    color: inherit;
+}
+.btnn{
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    padding: 1.5rem;
+    display: inline-block;
+    color: inherit;
+}
+.section-btn{
+margin: 5rem 0;
+}
+.aps{
+    margin-left: 10rem;
+}
+.wrappercontainer{
+    padding-top: 1px;
+}
+.cursos{
+    text-align: center;
+}
+.cursoscontainer{
+    display: flex;
+    text-align: left;
+    padding-left: 1rem;
+    gap: 1.5rem;
+}
+.cursos-card h3{
+    font-size: 1.8rem;
+}
+.cursos-card p{
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.cursos-card-content{
+    padding: 1rem 1,2rem;
+    border-radius: 0 0 8px 8px;
+    border:1px solid #f0e8e8;
+    border-top: transparent;
+}
+.cursos-card{
+    flex: 1;
+    /* border: 1px solid #f0e8e8;
+    border-radius: 1rem; */
+}
+.cursos-card img{
+    display: block;
+    width: 100%;
+}
+
+.escola{
+    display: flex;
+    gap: 2rem;
+    padding: 4rem;
+}
+.escola-title{
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+}
+.escola p{
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.contatos-address{
+    text-align: right;
+    font: 400 1rem Arial, Helvetica, sans-serif;
+    padding: 2rem 0;
+    margin-right: 2rem;
+}
+.footer{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3rem;
+}
+.footer a{
+    color: inherit;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo: Adivinhe o Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f0f0f0;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+    }
+    #mensagem {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    #reiniciar {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Adivinhe o Número</h1>
+  <p>Estou pensando em um número de <strong>1 a 100</strong>. Tente adivinhar!</p>
+
+  <input type="number" id="palpite" min="1" max="100" />
+  <button onclick="verificarPalpite()">Enviar Palpite</button>
+  <button id="reiniciar" onclick="reiniciarJogo()">🔁 Reiniciar Jogo</button>
+
+  <p id="mensagem"></p>
+  <p id="tentativas"></p>
+
+  <!-- Sons -->
+  <audio id="somAcerto" src="https://www.soundjay.com/button/sounds/button-4.mp3"></audio>
+  <audio id="somErro" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
+
+  <script>
+    let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    let tentativas = 0;
+
+    function verificarPalpite() {
+      const palpite = parseInt(document.getElementById("palpite").value);
+      const mensagem = document.getElementById("mensagem");
+      const tentativaTexto = document.getElementById("tentativas");
+      const somAcerto = document.getElementById("somAcerto");
+      const somErro = document.getElementById("somErro");
+
+      tentativas++;
+
+      if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+        mensagem.textContent = "⚠️ Por favor, insira um número entre 1 e 100.";
+        mensagem.style.color = "red";
+        somErro.play();
+        return;
+      }
+
+      if (palpite === numeroSecreto) {
+        mensagem.textContent = `🎉 Parabéns! Você acertou em ${tentativas} tentativas.`;
+        mensagem.style.color = "green";
+        somAcerto.play();
+        document.getElementById("reiniciar").style.display = "inline-block";
+      } else if (palpite < numeroSecreto) {
+        mensagem.textContent = "🔼 Muito baixo! Tente um número maior.";
+        mensagem.style.color = "orange";
+        somErro.play();
+      } else {
+        mensagem.textContent = "🔽 Muito alto! Tente um número menor.";
+        mensagem.style.color = "orange";
+        somErro.play();
+      }
+
+      tentativaTexto.textContent = `Tentativas: ${tentativas}`;
+    }
+
+    function reiniciarJogo() {
+      numeroSecreto = Math.floor(Math.random() * 100) + 1;
+      tentativas = 0;
+      document.getElementById("palpite").value = '';
+      document.getElementById("mensagem").textContent = '';
+      document.getElementById("tentativas").textContent = '';
+      document.getElementById("reiniciar").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

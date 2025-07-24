@@ -1,0 +1,103 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(180, 170, 231);
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+.main-title{
+     font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 46px 0;
+}
+.header{
+     display: flex;
+    background-color: #000000;
+    padding: 9px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.header-logo{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 15px;
+    letter-spacing: 2px;
+}
+.header-nav ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    gap: 15px;
+}
+.header-logo img {
+  max-height: 170px; /* ou o tamanho que quiser */
+  width: auto;
+}
+.header-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+}
+a.header__nav--active{
+    background-color: #1f50b9;
+    color: #0c1014;
+    pointer-events: none;
+}
+.header-nav a:hover{
+    text-decoration: underline;
+}
+.pricing{
+    display: flex;
+    gap: 15px;
+}
+.pricing-plan{
+    background-color: #ccc;
+    flex: 1;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px rgb(18, 14, 83);
+    display: flex;
+    flex-direction: column;
+}
+.class-plan__title{
+    text-transform: uppercase;
+    border-bottom: 2px solid #4f5094;
+    border-top: 0;
+    padding-bottom: 10px;
+    letter-spacing: 3px;
+}
+.pricing-plan p{
+    margin-top: 0;
+}
+.pricing-plan__price{
+    font-size: 35px;
+}
+.pricing-plan__features li::marker{
+    color: #171618;
+}
+.pricing-plan__features{
+    margin: 0 0 35px;
+    color: #000000;
+    padding-left: 16px;
+    line-height: 2.2;
+    flex: 1;
+}
+.pricing-plan__cta{
+    text-decoration: none;
+    color: #0c1014;
+    background-color: #5b537e;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding:16px 10px;
+    text-align: center;
+}
+.pricing-plan__cta:hover{
+    outline: 2px solid #364d77;
+    background-color: transparent;
+    color: white;
+}
